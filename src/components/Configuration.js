@@ -120,7 +120,7 @@ const ConfigurationPage = () => {
       }, 2000);
     } else {
       axios
-        .post("https://localhost:44317/api/ConfigurationPage", values)
+        .post("https://localhost:7276/api/ConfigurationPage", values)
         .then(() => {
           setIsModalVisible(false);
           fetchData();
