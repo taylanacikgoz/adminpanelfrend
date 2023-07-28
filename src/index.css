@@ -1,13 +1,62 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Roboto+Condensed:wght@700&display=swap");
+/* font-family: 'Inter', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto Condensed', sans-serif; */
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #f7780b;
+  padding: 10px;
+  font-family: "Roboto Condensed", sans-serif;
+  cursor: pointer;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.header-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto;
+  align-items: center;
+}
+
+header {
+  display: flex;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  color: red;
+}
+
+.container-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.datagrid {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media only screen and (max-width: 500px) {
+  .header-top {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  header nav {
+    display: flex;
+    flex-direction: column;
+  }
 }
