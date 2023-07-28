@@ -82,19 +82,23 @@ const ConfigurationPage = () => {
 
   const fetchData = () => {
     setLoading(true);
-    axios("https://localhost:7276/api/ConfigurationPage").then((results) => {
-      setData(results?.data);
-      setLoading(false);
+    axios
+      .get("https://localhost:7276/api/ConfigurationPage")
+      .then((results) => {
+        setData(results?.data);
+        setLoading(false);
 
-      const addedBuildingTypes = results.data.map((item) => item.buildingType);
+        const addedBuildingTypes = results.data.map(
+          (item) => item.buildingType
+        );
 
-      // Secilebilir BuildingType'lari yukarda tanimladigim buildintType icinden filtrele ve tabloya eklenmis olanlari cikar.
-      const filteredBuildingTypes = buildingTypes.filter(
-        (item) => !addedBuildingTypes.includes(item.text)
-      );
+        // Secilebilir BuildingType'lari yukarda tanimladigim buildintType icinden filtrele ve tabloya eklenmis olanlari cikar.
+        const filteredBuildingTypes = buildingTypes.filter(
+          (item) => !addedBuildingTypes.includes(item.text)
+        );
 
-      setDistinctBuildingType(filteredBuildingTypes.map((item) => item.text));
-    });
+        setDistinctBuildingType(filteredBuildingTypes.map((item) => item.text));
+      });
   };
 
   useEffect(() => {
