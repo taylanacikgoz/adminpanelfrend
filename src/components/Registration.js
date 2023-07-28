@@ -78,7 +78,7 @@ const Registration = () => {
     axios
       .post("https://localhost:7276/api/User/register", values)
       .then((response) => {
-        if (response.data.isSuccess) {
+        if (response.status === 200) {
           navigate("/login");
         }
         // Registration is Success
